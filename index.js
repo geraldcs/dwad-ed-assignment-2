@@ -68,7 +68,26 @@ async function main() {
     })
 
     // create emedded document (ships from)
-    
+    app.post('/products/:productId/shipsFrom', async function(req, res) {
+        const products = await db.collection('products').updateOne(
+            {
+                '_id': ObjectId(req.params.productId)
+            },
+            {
+                '$push': {
+                    'shipsFrom': {
+                        "country": req.body.country,
+                        "city": req.body.city
+                    }
+                }
+            }
+        )
+
+        res.json({
+            'message': "Location added successfully",
+            'products': products
+        })
+    })
 
     // delete a document
     app.delete('/products/:productId', async function(req, res) {
