@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mongoUtil = require('./MongoUtil');
-const {ObjectId} = require('mongodb');
+const { ObjectId } = require('mongodb');
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 app.use(express.json());
@@ -15,24 +15,24 @@ const TOKEN_SECRET = process.env.TOKEN_SECRET;
 async function main() {
 
     const db = await mongoUtil.connect(MONGO_URI, DB_NAME);
-    
+
     // default route
-    app.get('/', function(req, res) {
+    app.get('/', function (req, res) {
         res.json({
             'message': "Server is up and running"
         })
     })
 
     // create route
-    app.post('/products', async function(req, res) {
+    app.post('/products', async function (req, res) {
         const products = await db.collection('products').insertOne({
             "category": req.body.category,
-            "brand": req.body.brand, 
-            "productName": req.body.productName, 
+            "brand": req.body.brand,
+            "productName": req.body.productName,
             "productInfo": req.body.productInfo,
             "pricePhp": req.body.pricePhp,
-            "stock": req.body.stock, 
-            "shipsFrom": req.body.shipsFrom, 
+            "stock": req.body.stock,
+            "shipsFrom": req.body.shipsFrom,
             "amountSold": req.body.amontSold,
             "comments": req.body.comments,
         })
@@ -42,6 +42,30 @@ async function main() {
             "products": products
         })
     })
+    // create emedded document (comments)
+    app.post('/products/:productId', async function (req, res) {
+        const products = await db.collection('products').updateOne(
+            {
+                '_id': ObjectId(req.params.productId)
+            },
+            {
+                "$push": {
+                    'comments': {
+                        '_id': ObjectId(),
+                        'content': req.body.content,
+                        'ratings': req.body.ratings,
+                        'likes': req.body.likes,
+                    }
+                }
+            }
+        )
+
+        res.json({
+            'message': 'Comment added successfully',
+            'products': products
+        })
+    })
+
 }
 
 main();
