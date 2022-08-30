@@ -33,7 +33,7 @@ async function main() {
             "pricePhp": req.body.pricePhp,
             "stock": req.body.stock,
             "shipsFrom": req.body.shipsFrom,
-            "amountSold": req.body.amontSold,
+            "amountSold": req.body.amountSold,
             "comments": req.body.comments,
         })
 
@@ -44,7 +44,7 @@ async function main() {
     })
 
     // create emedded document (comments)
-    app.post('/products/:productId', async function (req, res) {
+    app.post('/products/:productId/comments', async function (req, res) {
         const products = await db.collection('products').updateOne(
             {
                 '_id': ObjectId(req.params.productId)
@@ -66,6 +66,9 @@ async function main() {
             'products': products
         })
     })
+
+    // create emedded document (ships from)
+    
 
     // delete a document
     app.delete('/products/:productId', async function(req, res) {
