@@ -89,6 +89,23 @@ async function main() {
         })
     })
 
+    app.put('/comments/:commentId', async function(req, res) {
+        const products = await db.collection('products').updateOne({
+            'comments._id': ObjectId(req.params.commentId)
+        },
+        {
+            '$set': {
+                'comments.$.content': req.body.content,
+                'comments.$.ratings': req.body.ratings,
+                'comments.$.likes': req.body.likes
+            }
+        }
+        )
+        res.json({
+            'message': "Comment has been updated",
+            "products": products
+        })
+    })
     // delete a document
     app.delete('/products/:productId', async function(req, res) {
         await db.collection('products').deleteOne(
