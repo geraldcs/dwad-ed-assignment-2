@@ -23,7 +23,7 @@ async function main() {
         })
     })
 
-    // create route
+    // create document
     app.post('/products', async function (req, res) {
         const products = await db.collection('products').insertOne({
             "category": req.body.category,
@@ -42,6 +42,7 @@ async function main() {
             "products": products
         })
     })
+
     // create emedded document (comments)
     app.post('/products/:productId', async function (req, res) {
         const products = await db.collection('products').updateOne(
@@ -64,6 +65,20 @@ async function main() {
             'message': 'Comment added successfully',
             'products': products
         })
+    })
+
+    // delete a document
+    app.delete('/products/:productId', async function(req, res) {
+        await db.collection('products').deleteOne(
+            {
+                '_id': ObjectId(req.params.productId)
+            })
+
+            res.json(
+                {
+                    "message": "Deleted Successfully" 
+                }
+            )
     })
 
 }
