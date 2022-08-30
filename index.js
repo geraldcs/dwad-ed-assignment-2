@@ -89,6 +89,15 @@ async function main() {
             'products': products
         })
     })
+
+    // read - get info on a product by its id
+    app.get('/products/:productId', async function(req, res) {
+        const products = await db.collection('products').findOne({
+            _id: ObjectId(req.params.productId)
+        })
+        res.json(products);
+    })
+    
     // update an embedded inside the comments field
     app.put('/comments/:commentId', async function(req, res) {
         const products = await db.collection('products').updateOne({
