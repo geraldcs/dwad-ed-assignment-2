@@ -9,7 +9,12 @@ app.use(express.json());
 app.use(cors());
 
 async function main() {
-
+    // default route
+    app.get('/', function(req, res) {
+        res.json({
+            'message': "Server is up and running"
+        })
+    })
 }
 
 main();
