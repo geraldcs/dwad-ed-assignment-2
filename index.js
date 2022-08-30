@@ -76,6 +76,7 @@ async function main() {
             {
                 '$push': {
                     'shipsFrom': {
+                        "_id": ObjectId(),
                         "country": req.body.country,
                         "city": req.body.city
                     }
@@ -88,7 +89,7 @@ async function main() {
             'products': products
         })
     })
-
+    // update an embedded inside the comments field
     app.put('/comments/:commentId', async function(req, res) {
         const products = await db.collection('products').updateOne({
             'comments._id': ObjectId(req.params.commentId)
