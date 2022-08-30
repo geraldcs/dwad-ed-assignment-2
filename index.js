@@ -67,29 +67,6 @@ async function main() {
         })
     })
 
-    // create emedded document (ships from)
-    app.post('/products/:productId/shipsFrom', async function(req, res) {
-        const products = await db.collection('products').updateOne(
-            {
-                '_id': ObjectId(req.params.productId)
-            },
-            {
-                '$push': {
-                    'shipsFrom': {
-                        "_id": ObjectId(),
-                        "country": req.body.country,
-                        "city": req.body.city
-                    }
-                }
-            }
-        )
-
-        res.json({
-            'message': "Location added successfully",
-            'products': products
-        })
-    })
-
     // read - get info on a product by its id
     app.get('/products/:productId', async function(req, res) {
         const products = await db.collection('products').findOne({
