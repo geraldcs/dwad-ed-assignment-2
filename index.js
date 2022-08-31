@@ -114,6 +114,22 @@ async function main() {
             "products": products
         })
     })
+
+    // creates a user
+    app.post('/users', async function(req, res) {
+        const results = await db.collection('users').insertOne({
+            "name": req.body.name, 
+            "email": req.body.email, 
+            "password": req.body.password, 
+            "age": req.body.age,
+        })
+
+        res.json({
+            "message": "User has been created",
+            "results": results
+        })
+    })
+
     // delete a document
     app.delete('/products/:productId', async function(req, res) {
         await db.collection('products').deleteOne(
