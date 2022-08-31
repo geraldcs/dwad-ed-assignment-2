@@ -32,10 +32,18 @@ async function main() {
                 "$options": 'i'
             }
         }
+
+        // aims to brings back products with more than 5 reviews 
+        if (req.query.min_sold) {
+            criteria.amountSold = {
+                '$gte': parseInt(req.query.min_sold)
+            }
+        }
+
         const products = await db.collection('products').find(criteria).toArray();
         res.json(products);
     })
-    
+
     // create document
     app.post('/products', async function (req, res) {
         const products = await db.collection('products').insertOne({
