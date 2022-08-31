@@ -22,7 +22,20 @@ async function main() {
             'message': "Server is up and running"
         })
     })
-
+    // read 
+    app.get('/products', async function(req, res) {
+        let criteria = {}
+        // brings back the results for the brand 
+        if (req.query.brand) {
+            criteria.brand = {
+                "$regex": req.query.brand, 
+                "$options": 'i'
+            }
+        }
+        const products = await db.collection('products').find(criteria).toArray();
+        res.json(products);
+    })
+    
     // create document
     app.post('/products', async function (req, res) {
         const products = await db.collection('products').insertOne({
