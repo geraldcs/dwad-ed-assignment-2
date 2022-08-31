@@ -45,6 +45,15 @@ async function main() {
             }
         }
 
+        // excludes phone in a given year 
+        if (req.query.exclude_year) {
+            criteria.productInfo = {
+                '$not': {
+                    '$in': [req.query.exclude_year]
+                }
+            }
+        }
+
         // aims to bring back phones with less than the given price
         if (req.query.price_less_than) {
             criteria.pricePhp = {
