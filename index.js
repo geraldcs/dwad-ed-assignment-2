@@ -32,7 +32,19 @@ async function main() {
                 "$options": 'i'
             }
         }
-        
+        // brings back phones that matches the country it ships from
+        if (req.query.ships_from) {
+            criteria.shipsFrom = {
+                '$all': [
+                    {
+                        '$elemMatch': {
+                            'country': req.query.ships_from
+                        }
+                    }
+                ]
+            }
+        }
+
         // aims to bring back phones with less than the given price
         if (req.query.price_less_than) {
             criteria.pricePhp = {
