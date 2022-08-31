@@ -32,6 +32,21 @@ async function main() {
                 "$options": 'i'
             }
         }
+
+        // aims to bring back phones with less than the given price
+        if (req.query.price_less_than) {
+            criteria.pricePhp = {
+                '$lte': parseInt(req.query.price_less_than)
+            }
+        }
+
+        // aims to brings back products with more than or equal to the given amount of reviews
+        if (req.query.min_sold) {
+            criteria.amountSold = {
+                '$gte': parseInt(req.query.min_sold)
+            }
+        }
+
         // brings back phones that matches the country it ships from
         if (req.query.ships_from) {
             criteria.shipsFrom = {
@@ -51,20 +66,6 @@ async function main() {
                 '$not': {
                     '$in': [req.query.exclude_year]
                 }
-            }
-        }
-
-        // aims to bring back phones with less than the given price
-        if (req.query.price_less_than) {
-            criteria.pricePhp = {
-                '$lte': parseInt(req.query.price_less_than)
-            }
-        }
-
-        // aims to brings back products with more than or equal to the given amount of reviews
-        if (req.query.min_sold) {
-            criteria.amountSold = {
-                '$gte': parseInt(req.query.min_sold)
             }
         }
 
