@@ -68,6 +68,14 @@ async function main() {
             }
         }
 
+        // filter by stock
+        if (req.query.stock) {
+            criteria.stock = {
+                '$eq': parseInt(req.query.stock)
+            }
+        }
+
+
         const products = await db.collection('products').find(criteria).toArray();
         res.json(products);
     })
