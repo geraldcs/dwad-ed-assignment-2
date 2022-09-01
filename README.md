@@ -34,3 +34,11 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Body | [Body](./api-documentation/03a-create-new-product.md) |
 | Parameters | [Parameters](./api-documentation/03b-create-new-product-review-parameters.md) |
 | Expected Response | [Output](./api-documentation/03-create-new-output.md) |
+
+| Title | Get information on a product by its ID |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products/:productId |
+| Body | N/A |
+| Parameters | product_id (ObjectId): the unique Id of the product that we’re going to get information for  |
+| Expected Response | [Output](./api-documentation/04-get-info-product-id.md) |
