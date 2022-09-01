@@ -236,9 +236,22 @@ async function main() {
         })
     })
 
-
     // delete an embedded document
-
+    app.delete('/comments/:commentId', async function(req, res) {
+        const products = await db.collection('products').updateOne({
+            'comments._id': ObjectId(req.params.commentId)
+        }, {
+            '$pull': {
+                'comments': {
+                    '_id': ObjectId(req.params.commentId)
+                }
+            }
+        })
+        res.json({
+            'message': 'Comment has been removed',
+            'products': products
+        })
+    })
 
     // creates a user
     app.post('/users', async function (req, res) {
