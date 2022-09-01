@@ -47,7 +47,6 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | --- | --- |
 | Method | PUT |
 | Endpoint Path | /products/:productId |
-| Body | Body |
-| Parameters | There could be multiple parameters for a user to update, but there should be at least one . For example,
-- productName (string): The name of the product that you wish to update. |
-| Expected Response | Output |
+| Body | [Body](./api-documentation/05a-update-document-body.md) |
+| Parameters | [Parameters](./api-documentation/05-update-document-params) |
+| Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
