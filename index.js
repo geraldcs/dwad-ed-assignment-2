@@ -76,7 +76,6 @@ async function main() {
             }
         }
 
-
         const products = await db.collection('products').find(criteria).toArray();
         res.json(products);
     })
