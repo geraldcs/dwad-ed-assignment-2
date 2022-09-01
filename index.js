@@ -40,7 +40,7 @@ async function main() {
             }
         }
 
-        // aims to brings back products with more than or equal to the given amount of reviews
+        // aims to bring back products with more than or equal to the given amount of reviews
         if (req.query.min_sold) {
             criteria.amountSold = {
                 '$gte': parseInt(req.query.min_sold)
@@ -69,14 +69,19 @@ async function main() {
             }
         }
 
-        // filter by stock
+        // filter by stock, should the user want to search items that are currently in stock or if the user wishes to see which items aren't scarce
         if (req.query.stock) {
             criteria.stock = {
                 '$eq': parseInt(req.query.stock)
             }
         }
 
-        const products = await db.collection('products').find(criteria).toArray();
+        const products = await db.collection('products').find(criteria, {'projection': {
+        '_id': 1,
+        'brand': 1,
+        'productName': 1,
+        'pricePhp': 1}
+        }).toArray();
         res.json(products);
     })
 
