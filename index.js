@@ -198,7 +198,23 @@ async function main() {
         })
     })
 
-    // read embedded document - produtInfo
+    // read embedded document - productInfo
+    // projection set to only show information about the chosen product
+    app.get('/products/:productId/product_info', async function(req, res) {
+        const products = await db.collection('products').findOne({
+            _id: ObjectId(req.params.productId)
+        }, {
+            'projection': {
+                '_id': 1,
+                'brand': 1,
+                'productName': 1,
+                'productInfo': 1
+            }
+        })
+        res.json(products);
+
+    })
+
 
     // update an embedded document inside the comments field
     app.put('/comments/:commentId', async function (req, res) {
