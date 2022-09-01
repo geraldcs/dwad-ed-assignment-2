@@ -133,6 +133,32 @@ async function main() {
     })
 
     // update document
+    app.put('/products/:productId', async function (req, res) {
+        const products = await db.collection('products').findOne({
+            '_id': ObjectId(req.params.productId)
+        })
+
+        const results = await db.collection('products').updateOne({
+            '_id': ObjectId(req.params.productId)
+        }, {
+            "$set": {
+                "category": req.body.category ? req.body.category : products.category,
+                "brand": req.body.brand ? req.body.brand : products.brand,
+                "productName": req.body.productName ? req.body.productName : products.productName,
+                "productInfo": req.body.productInfo ? req.body.productInfo : products.productInfo,
+                "pricePhp": req.body.pricePhp ? req.body.pricePhp : products.pricePhp,
+                "stock": req.body.stock ? req.body.stock : products.stock,
+                "shipsFrom": req.body.shipsFrom ? req.body.shipsFrom : products.shipsFrom,
+                "amountSold": req.body.amountSold ? req.body.amountSold : products.amountSold,
+                "comments": req.body.comments ? req.body.comments : products.comments,
+            }
+        })
+
+        res.json({
+            'message': 'Produt updated successfully',
+            "results": results
+        })
+    })
 
     // delete a document
     app.delete('/products/:productId', async function (req, res) {
@@ -196,7 +222,7 @@ async function main() {
 
 
     // delete an embedded document
-    
+
 
     // creates a user
     app.post('/users', async function (req, res) {
