@@ -6,13 +6,4 @@
 | Endpoint Path | /products |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | ```
-[
-{
-"_id": "630e30660066909460adbb9d",
-"brand": "Apple",
-"productName": "iPhone 12",
-"pricePhp": 50890
-}, ...
-]
-``` |
+| Expected Response | [Output](https://prnt.sc/zHEKEGHP_wbw) |
