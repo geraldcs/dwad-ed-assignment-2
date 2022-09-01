@@ -131,10 +131,17 @@ async function main() {
 
     // read - get info on a product by its id
     app.get('/products/:productId', async function(req, res) {
-        const products = await db.collection('products').findOne({
-            _id: ObjectId(req.params.productId)
-        })
-        res.json(products);
+        try {
+            const products = await db.collection('products').findOne({
+                _id: ObjectId(req.params.productId)
+            })
+            res.json(products);
+        } catch(e) {
+            res.status(404)
+            res.json({
+                "error": "The page you're looking for does not exist"
+            })
+        }
     })
     
     // update an embedded inside the comments field
