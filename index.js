@@ -23,66 +23,77 @@ async function main() {
         })
     })
     // read 
-    app.get('/products', async function(req, res) {
-        let criteria = {}
-        // brings back the results for the brand 
-        if (req.query.brand) {
-            criteria.brand = {
-                "$regex": req.query.brand, 
-                "$options": 'i'
-            }
-        }
-
-        // aims to bring back phones with less than the given price
-        if (req.query.price_less_than) {
-            criteria.pricePhp = {
-                '$lte': parseInt(req.query.price_less_than)
-            }
-        }
-
-        // aims to bring back products with more than or equal to the given amount of reviews
-        if (req.query.min_sold) {
-            criteria.amountSold = {
-                '$gte': parseInt(req.query.min_sold)
-            }
-        }
-
-        // brings back phones that matches the country it ships from
-        if (req.query.ships_from) {
-            criteria.shipsFrom = {
-                '$all': [
-                    {
-                        '$elemMatch': {
-                            'country': req.query.ships_from
-                        }
-                    }
-                ]
-            }
-        }
-
-        // excludes phone in a given year 
-        if (req.query.exclude_year) {
-            criteria.productInfo = {
-                '$not': {
-                    '$in': [req.query.exclude_year]
+    app.get('/products', async function (req, res) {
+        try {
+            let criteria = {}
+            // brings back the results for the brand 
+            if (req.query.brand) {
+                criteria.brand = {
+                    "$regex": req.query.brand,
+                    "$options": 'i'
                 }
             }
-        }
 
-        // filter by stock, should the user want to search items that are currently in stock or if the user wishes to see which items aren't scarce
-        if (req.query.stock) {
-            criteria.stock = {
-                '$eq': parseInt(req.query.stock)
+            // aims to bring back phones with less than the given price
+            if (req.query.price_less_than) {
+                criteria.pricePhp = {
+                    '$lte': parseInt(req.query.price_less_than)
+                }
             }
-        }
 
-        const products = await db.collection('products').find(criteria, {'projection': {
-        '_id': 1,
-        'brand': 1,
-        'productName': 1,
-        'pricePhp': 1}
-        }).toArray();
-        res.json(products);
+            // aims to bring back products with more than or equal to the given amount of reviews
+            if (req.query.min_sold) {
+                criteria.amountSold = {
+                    '$gte': parseInt(req.query.min_sold)
+                }
+            }
+
+            // brings back phones that matches the country it ships from
+            if (req.query.ships_from) {
+                criteria.shipsFrom = {
+                    '$all': [
+                        {
+                            '$elemMatch': {
+                                'country': req.query.ships_from
+                            }
+                        }
+                    ]
+                }
+            }
+
+            // excludes phone in a given year 
+            if (req.query.exclude_year) {
+                criteria.productInfo = {
+                    '$not': {
+                        '$in': [req.query.exclude_year]
+                    }
+                }
+            }
+
+            // filter by stock, should the user want to search items that are currently in stock or if the user wishes to see which items aren't scarce
+            if (req.query.stock) {
+                criteria.stock = {
+                    '$eq': parseInt(req.query.stock)
+                }
+            }
+
+            const products = await db.collection('products').find(criteria, {
+                'projection': {
+                    '_id': 1,
+                    'brand': 1,
+                    'productName': 1,
+                    'pricePhp': 1
+                }
+            }).toArray();
+            res.json(products);
+        } catch (e) {
+            res.status(500);
+            res.json(
+                {
+                    'error': 'Internal Server Error'
+                }
+            )
+        }
     })
 
     // create document
@@ -130,32 +141,33 @@ async function main() {
     })
 
     // read - get info on a product by its id
-    app.get('/products/:productId', async function(req, res) {
+    // if the document does not exist, a valid status code and message are sent back as JSON response
+    app.get('/products/:productId', async function (req, res) {
         try {
             const products = await db.collection('products').findOne({
                 _id: ObjectId(req.params.productId)
             })
             res.json(products);
-        } catch(e) {
+        } catch (e) {
             res.status(404)
             res.json({
                 "error": "The page you're looking for does not exist"
             })
         }
     })
-    
+
     // update an embedded inside the comments field
-    app.put('/comments/:commentId', async function(req, res) {
+    app.put('/comments/:commentId', async function (req, res) {
         const products = await db.collection('products').updateOne({
             'comments._id': ObjectId(req.params.commentId)
         },
-        {
-            '$set': {
-                'comments.$.content': req.body.content,
-                'comments.$.ratings': req.body.ratings,
-                'comments.$.likes': req.body.likes
+            {
+                '$set': {
+                    'comments.$.content': req.body.content,
+                    'comments.$.ratings': req.body.ratings,
+                    'comments.$.likes': req.body.likes
+                }
             }
-        }
         )
         res.json({
             'message': "Comment has been updated",
@@ -164,11 +176,11 @@ async function main() {
     })
 
     // creates a user
-    app.post('/users', async function(req, res) {
+    app.post('/users', async function (req, res) {
         const results = await db.collection('users').insertOne({
-            "name": req.body.name, 
-            "email": req.body.email, 
-            "password": req.body.password, 
+            "name": req.body.name,
+            "email": req.body.email,
+            "password": req.body.password,
             "age": req.body.age,
         })
 
@@ -179,17 +191,17 @@ async function main() {
     })
 
     // delete a document
-    app.delete('/products/:productId', async function(req, res) {
+    app.delete('/products/:productId', async function (req, res) {
         await db.collection('products').deleteOne(
             {
                 '_id': ObjectId(req.params.productId)
             })
 
-            res.json(
-                {
-                    "message": "Deleted Successfully" 
-                }
-            )
+        res.json(
+            {
+                "message": "Deleted Successfully"
+            }
+        )
     })
 
 }
