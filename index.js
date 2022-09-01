@@ -22,7 +22,7 @@ function generateAccessToken(id, email) {
 }
 
 function authVerificationJWT(req, res, next) {
-   
+
     if (req.headers.authorization) {
         const headers = req.headers.authorization;
         const token = headers.split(" ")[1];
@@ -37,11 +37,6 @@ function authVerificationJWT(req, res, next) {
             }
 
             req.user = tokenData;
-            res.json({
-                'email': req.user.email,
-                'id': req.user.id,
-                'message': 'You are viewing your profile'
-            })
             next();
         })
 
@@ -63,7 +58,7 @@ async function main() {
             'message': "Server is up and running"
         })
     })
-    // read 
+    // read and get all the products
     app.get('/products', async function (req, res) {
         try {
             let criteria = {}
@@ -138,7 +133,7 @@ async function main() {
     })
 
     // create document
-    app.post('/products', async function (req, res) {
+    app.post('/products', authVerificationJWT,async function (req, res) {
         const products = await db.collection('products').insertOne({
             "category": req.body.category,
             "brand": req.body.brand,
@@ -174,7 +169,7 @@ async function main() {
     })
 
     // update document
-    app.put('/products/:productId', async function (req, res) {
+    app.put('/products/:productId', authVerificationJWT, async function (req, res) {
         const products = await db.collection('products').findOne({
             '_id': ObjectId(req.params.productId)
         })
@@ -196,13 +191,13 @@ async function main() {
         })
 
         res.json({
-            'message': 'Produt updated successfully',
+            'message': 'Product updated successfully',
             "results": results
         })
     })
 
     // delete a document
-    app.delete('/products/:productId', async function (req, res) {
+    app.delete('/products/:productId', authVerificationJWT, async function (req, res) {
         await db.collection('products').deleteOne(
             {
                 '_id': ObjectId(req.params.productId)
@@ -216,7 +211,7 @@ async function main() {
     })
 
     // create emedded document (comments)
-    app.post('/products/:productId/comments', async function (req, res) {
+    app.post('/products/:productId/comments', authVerificationJWT, async function (req, res) {
         const products = await db.collection('products').updateOne(
             {
                 '_id': ObjectId(req.params.productId)
@@ -241,7 +236,7 @@ async function main() {
 
     // read embedded document - productInfo
     // projection set to only show information about the chosen product
-    app.get('/products/:productId/product_info', async function(req, res) {
+    app.get('/products/:productId/product_info', async function (req, res) {
         const products = await db.collection('products').findOne({
             _id: ObjectId(req.params.productId)
         }, {
@@ -258,7 +253,7 @@ async function main() {
 
 
     // update an embedded document inside the comments field
-    app.put('/comments/:commentId', async function (req, res) {
+    app.put('/comments/:commentId', authVerificationJWT, async function (req, res) {
         const products = await db.collection('products').updateOne({
             'comments._id': ObjectId(req.params.commentId)
         },
@@ -278,7 +273,7 @@ async function main() {
     })
 
     // delete an embedded document
-    app.delete('/comments/:commentId', async function(req, res) {
+    app.delete('/comments/:commentId', authVerificationJWT, async function (req, res) {
         const products = await db.collection('products').updateOne({
             'comments._id': ObjectId(req.params.commentId)
         }, {
