@@ -12,6 +12,47 @@ const MONGO_URI = process.env.MONGO_URI;
 const DB_NAME = process.env.DB_NAME;
 const TOKEN_SECRET = process.env.TOKEN_SECRET;
 
+function generateAccessToken(id, email) {
+    return jwt.sign({
+        'id': id,
+        'email': email
+    }, TOKEN_SECRET, {
+        'expiresIn': '20 days'
+    })
+}
+
+function authVerificationJWT(req, res, next) {
+   
+    if (req.headers.authorization) {
+        const headers = req.headers.authorization;
+        const token = headers.split(" ")[1];
+
+        jwt.verify(token, TOKEN_SECRET, function (error, tokenData) {
+            if (error) {
+                res.status(403);
+                res.json({
+                    'error': "Your access token is invalid"
+                })
+                return;
+            }
+
+            req.user = tokenData;
+            res.json({
+                'email': req.user.email,
+                'id': req.user.id,
+                'message': 'You are viewing your profile'
+            })
+            next();
+        })
+
+    } else {
+        res.status(403);
+        res.json({
+            'error': "Please provide an access token to access this route"
+        })
+    }
+}
+
 async function main() {
 
     const db = await mongoUtil.connect(MONGO_URI, DB_NAME);
@@ -287,6 +328,15 @@ async function main() {
             })
         }
     });
+
+    // retrieve the profile of the user 
+    app.get('/user/:userId', authVerificationJWT, async function (req, res) {
+        res.json({
+            'email': req.user.email,
+            'id': req.user.id,
+            'message': 'You are viewing your profile'
+        })
+    })
 
 }
 
