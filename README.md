@@ -42,3 +42,12 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Body | N/A |
 | Parameters | productId (ObjectId): the unique Id of the product that we’re going to get information for  |
 | Expected Response | [Output](./api-documentation/04-get-info-product-id.md) |
+
+| Title | Update a document |
+| --- | --- |
+| Method | PUT |
+| Endpoint Path | /products/:productId |
+| Body | Body |
+| Parameters | There could be multiple parameters for a user to update, but there should be at least one . For example,
+- productName (string): The name of the product that you wish to update. |
+| Expected Response | Output |
