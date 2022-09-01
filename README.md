@@ -31,6 +31,6 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | --- | --- |
 | Method | POST |
 | Endpoint Path | /products |
-| Body |  |
-| Parameters | [Parameters](./api-documentation/03a-new-product-review-parameters.md) |
-| Expected Response |  |
+| Body | [Body](./api-documentation/03a-create-new-product.md) |
+| Parameters | [Parameters](./api-documentation/03b-create-new-product-review-parameters.md) |
+| Expected Response | [Output](./api-documentation/03-create-new-output.md) |
