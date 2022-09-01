@@ -147,7 +147,7 @@ async function main() {
         })
 
         res.json({
-            "message": "New product review has been addeed",
+            "message": "New product review has been added",
             "products": products
         })
     })
