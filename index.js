@@ -116,6 +116,38 @@ async function main() {
         })
     })
 
+    // read - get info on a product by its id
+    // if the document does not exist, a valid status code and message are sent back as JSON response
+    app.get('/products/:productId', async function (req, res) {
+        try {
+            const products = await db.collection('products').findOne({
+                _id: ObjectId(req.params.productId)
+            })
+            res.json(products);
+        } catch (e) {
+            res.status(404)
+            res.json({
+                "error": "The page you're looking for does not exist"
+            })
+        }
+    })
+
+    // update document
+
+    // delete a document
+    app.delete('/products/:productId', async function (req, res) {
+        await db.collection('products').deleteOne(
+            {
+                '_id': ObjectId(req.params.productId)
+            })
+
+        res.json(
+            {
+                "message": "Deleted Successfully"
+            }
+        )
+    })
+
     // create emedded document (comments)
     app.post('/products/:productId/comments', async function (req, res) {
         const products = await db.collection('products').updateOne(
@@ -140,23 +172,9 @@ async function main() {
         })
     })
 
-    // read - get info on a product by its id
-    // if the document does not exist, a valid status code and message are sent back as JSON response
-    app.get('/products/:productId', async function (req, res) {
-        try {
-            const products = await db.collection('products').findOne({
-                _id: ObjectId(req.params.productId)
-            })
-            res.json(products);
-        } catch (e) {
-            res.status(404)
-            res.json({
-                "error": "The page you're looking for does not exist"
-            })
-        }
-    })
+    // read embedded document - produtInfo
 
-    // update an embedded inside the comments field
+    // update an embedded document inside the comments field
     app.put('/comments/:commentId', async function (req, res) {
         const products = await db.collection('products').updateOne({
             'comments._id': ObjectId(req.params.commentId)
@@ -169,11 +187,16 @@ async function main() {
                 }
             }
         )
+
         res.json({
             'message': "Comment has been updated",
             "products": products
         })
     })
+
+
+    // delete an embedded document
+    
 
     // creates a user
     app.post('/users', async function (req, res) {
@@ -190,19 +213,6 @@ async function main() {
         })
     })
 
-    // delete a document
-    app.delete('/products/:productId', async function (req, res) {
-        await db.collection('products').deleteOne(
-            {
-                '_id': ObjectId(req.params.productId)
-            })
-
-        res.json(
-            {
-                "message": "Deleted Successfully"
-            }
-        )
-    })
 
 }
 
