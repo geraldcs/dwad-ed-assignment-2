@@ -1,3 +1,5 @@
+```
 {
   "message": "Server is up and running"
 }
+```
