@@ -54,13 +54,22 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Parameters | [Parameters](./api-documentation/05-update-document-params) |
 | Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
 
-| Title | Delete an embedded document |
+| Title | Delete an document by its ID |
 | --- | --- |
 | Method | DELETE |
 | Endpoint Path | /products/:productId |
 | Body | N/A |
 | Parameters | [Parameters](./api-documentation/06-delete-params.md) |
 | Expected Response | [Output](./api-documentation/06-delete-response.md) |
+
+| Title | Create embedded document (comments) |
+| --- | --- |
+| Method | POST |
+| Endpoint Path | /products/:productId/coments |
+| Body | [Body](./api-documentation/07-create-embed-doc-body.md) |
+| Parameters | [Parameters](./api-documentation/07a-create-embed-doc-params.md) |
+| Expected Response | [Output](./api-documentation/07b-create-embed-doc-response.md) |
+
 
 </details>
 
