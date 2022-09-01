@@ -11,6 +11,8 @@ In this modern day and age, a product is only a finger tip away. With the use of
 ## Features
 
 ## API Documentation
+<details>
+    <summary> See entire documentation </summary>
 | Title | Default route |
 | --- | --- |
 | Method | GET |
@@ -50,3 +52,4 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Body | [Body](./api-documentation/05a-update-document-body.md) |
 | Parameters | [Parameters](./api-documentation/05-update-document-params) |
 | Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
+</details>
