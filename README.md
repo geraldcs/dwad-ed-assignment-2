@@ -25,5 +25,5 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Endpoint Path | /products |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | [Output](https://prnt.sc/zHEKEGHP_wbw) |
+| Expected Response | [Output](./api-documentation/02-retrieve-all-products.md) |
 
