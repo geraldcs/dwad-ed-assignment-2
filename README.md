@@ -40,5 +40,5 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | GET |
 | Endpoint Path | /products/:productId |
 | Body | N/A |
-| Parameters | product_id (ObjectId): the unique Id of the product that we’re going to get information for  |
+| Parameters | productId (ObjectId): the unique Id of the product that we’re going to get information for  |
 | Expected Response | [Output](./api-documentation/04-get-info-product-id.md) |
