@@ -11,6 +11,6 @@
     "brand": "Apple",
     "productName": "iPhone 12",
     "pricePhp": 50890
-  }, …
-] 
-|
+  }, …]
+ |
+
