@@ -268,6 +268,25 @@ async function main() {
         })
     })
 
+    // login
+    app.post('/login', async function (req, res) {
+        const user = await db.collection('users').findOne({
+            'email': req.body.email,
+            'password': req.body.password
+        });
+
+        if (user) {
+            let token = generateAccessToken(user._id, user.email);
+            res.json({
+                'accessToken': token
+            })
+        } else {
+            res.status(401);
+            res.json({
+                'message': 'Invalid email or password'
+            })
+        }
+    });
 
 }
 
