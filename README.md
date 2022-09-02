@@ -234,12 +234,12 @@ age: 41
 
 ## Testing
 <details>
-    <summary> See test cases </summary>
-#### Prerequisite
-* The user must already:
+    <summary> See test cases </summary> 
+   
+* The user should have already accomplished the following:
    * Have signed up for an account
    * Acquire the access token through logging in to perform CRUD operations on endpoints
-   
+* If a user wishes to get the access token, they can refer to the steps below
 
 | Method | GET |
 | --- | --- |
