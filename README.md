@@ -234,5 +234,18 @@ age: 41
 
 ## Testing
 
+## Design
+### Technologies Used 
+* Node.js
+   * Backend framework
+   * Allows the usage of npm
+* MongoDB
+   * NoSQL document-oriented database program
+   * Used to store the products and user collection
+* Express.js
+   * Standard server framework for Node.js
+* Advanced Rest Client
+   * Used for testing routes and performing CRUD operations
+
 ## Credits
 * The comments for the products can be found in https://shopee.sg/collections/1055161 and https://shopee.sg/search?keyword=phone
