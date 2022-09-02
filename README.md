@@ -280,7 +280,7 @@ age: 41
    * remove any headers
    * the query string starts after the question mark
    * query string allows the user to write out an object in a string format
-   * since we're looking for {brand: Apple}, type in the address bar: `http://localhost:portnumber?brand=apple`
+   * since we're looking for {brand: "Apple"}, type in the address bar: `http://localhost:portnumber?brand=apple`
    * the response will be an array of objects containing the produts with 'Apple' as the brand.
    
 | Method | GET |
@@ -320,6 +320,11 @@ age: 41
 6. Searching for a product that ships from China 
    * make sure that the method is set to GET
    * remove any headers
+   * we're looking for a product is shipped from a specific country
+   * note that it is an array of nested objects, and it has two fields: "country", and "city"
+   * the result will return any product so long as it corresponds to the "country"
+   * type in the address bar: `/products?ships_from=China`
+   * after sending the request, it will return the following products: iPhone SE (3rd generation), Nothing Phone 1, Oppo Reno 3 and Huawei Mate X2
    
 | Method | GET |
 | --- | --- |
@@ -328,7 +333,12 @@ age: 41
 | Parameters | [Parameters](./api-documentation/query-strings/04-ships-from-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/04-ships-from.md) |
 
-
+7. Filter products according to the amount of stocks
+   * this route uses MongoDB operator '$eq', therefore it will return an exact amount, or will return nothing if it does not find any value to match
+   * to test, look for products who only has 10 units 
+   * type in `http://localhost:portnumber/products?stock=10`
+   * after sending the request, it will return 'Oppo Reno 3' and its product information
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /products?stock=stock_number |
