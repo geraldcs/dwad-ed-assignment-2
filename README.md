@@ -10,6 +10,46 @@ In this modern day and age, a product is only a finger tip away. With the use of
 
 ## Features
 
+## Sample Mongo Documents 
+<details>
+    <summary> See sample documents </summary>
+    Sample document from the 'products' collection: 
+```
+"category": "mobile",
+"brand": "Huawei",
+"productName": "Huawei Mate X2",
+"productInfo": {
+    "description": "A foldable 8 inch display that is concealed when folded",
+    "dimensions": {
+        "height": 161.8,
+        "width": 145.8,
+        "uom": "mm"
+    },
+    "yearMade": 2022
+},
+"pricePhp": 96557,
+"stock": 20,
+"shipsFrom": [
+    {
+        "country": "China",
+        "city": "Shenzhen"
+    }
+],
+"amountSold": 2,
+"comments": [
+    {
+        "content": "Expensive and quite interesting",
+        "ratings": 5,
+        "likes": 127
+    },
+    {
+        "content": "This is the best foldable phon ever",
+        "ratings": 5,
+        "likes": 182 
+    }
+    ]    
+```
+</details>
 ## API Documentation
 <details>
     <summary> See entire documentation </summary>
@@ -163,3 +203,5 @@ In this modern day and age, a product is only a finger tip away. With the use of
 ## Testing
 
 ## Credits
+Sources:
+The comments for the documents in the products ccollection can be found in https://shopee.sg/collections/1055161 and https://shopee.sg/search?keyword=phone
