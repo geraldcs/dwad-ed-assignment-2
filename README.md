@@ -22,7 +22,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 * Signing up
     * A user can sign up with a valid email, which is necessary for acquiring the access token
 * Logging in
-    * A user can login, provided that they already registered
+    * A user can login, provided that they already signed up
 * Delete a user
     * A user can can be removed through their unique ID
 
