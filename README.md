@@ -68,7 +68,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | GET |
 | Endpoint Path | /products?stock=stock_number_placeholder |
 | Body | N/A |
-| Parameters | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/05-stocks-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/05-stocks.md) |
 
 | Title | Create a new product review |
