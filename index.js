@@ -110,8 +110,7 @@ async function main() {
                     'brand': 1,
                     'productName': 1,
                     'pricePhp': 1,
-                    'amountSold': 1,
-                    'productInfo': 1
+                    'amountSold': 1
                 }
             }).toArray();
             res.json(products);

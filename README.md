@@ -69,7 +69,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Endpoint Path | /products?stock=stock_number_placeholder |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | Output |
+| Expected Response | [Output](./api-documentation/query-strings/05-min_sold.md) |
 
 | Title | Create a new product review |
 | --- | --- |
