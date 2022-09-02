@@ -92,7 +92,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | PUT |
 | Endpoint Path | /products/:productId |
 | Body | [Body](./api-documentation/05a-update-document-body.md) |
-| Parameters | [Parameters](./api-documentation/05-update-document-params) |
+| Parameters | [Parameters](./api-documentation/05-update-document-params.md) |
 | Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
 
 | Title | Delete an document by its ID |
