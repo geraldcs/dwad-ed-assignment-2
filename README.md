@@ -77,6 +77,15 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Body | N/A |
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/08-retrieve-info.md) |
+
+| Title | Update an embedded document (inside the comments field) |
+| --- | --- |
+| Method | PUT |
+| Endpoint Path | /comments/:commentId |
+| Body | [Body](./api-documentation/09-update-embed-doc.md) |
+| Parameters | [Parameters](./api-documentation/09a-update-embed-docs-params.md) |
+| Expected Response | [Output](./api-documentation/09b-update-embed-doc-response.md) |
+
 </details>
 
 ## Testing

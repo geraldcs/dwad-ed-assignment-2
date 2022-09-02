@@ -1,0 +1,12 @@
+```
+{
+  "message": "Comment has been updated",
+  "products": {
+    "acknowledged": true,
+    "modifiedCount": 1,
+    "upsertedId": null,
+    "upsertedCount": 0,
+    "matchedCount": 1
+  }
+}
+```
