@@ -305,7 +305,7 @@ age: 41
    * make sure that the method is set to GET
    * remove any headers
    * since we're looking for a product that sold at least 10 units, type in the address bar: /products?min_sold?=10
-      * make sure that the query inside the express application is in ParseInt() for it to view as an integer
+      * make sure that the query inside the express application is in `ParseInt()` for it to view the query as an integer
    *  inside the Response section, it will return an array of objects containing the 'iPhone 12' and 'iPhone 13 Pro Max'
 
 | Method | GET |
