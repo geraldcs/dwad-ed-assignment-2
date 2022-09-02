@@ -70,7 +70,13 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Parameters | [Parameters](./api-documentation/07a-create-embed-doc-params.md) |
 | Expected Response | [Output](./api-documentation/07b-create-embed-doc-response.md) |
 
-
+| Title | Retrieve information from a product using its ID |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products/:productId/product_info |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | [Output](./api-documentation/08-retrieve-info.md) |
 </details>
 
 ## Testing
