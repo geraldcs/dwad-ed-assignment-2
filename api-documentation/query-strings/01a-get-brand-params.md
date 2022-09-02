@@ -1,1 +1,1 @@
-* ?brand=brand_name = Search products through their brand names
+* ```?brand=brand_name``` Search products through their brand names
