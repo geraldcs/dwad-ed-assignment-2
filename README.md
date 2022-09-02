@@ -215,4 +215,4 @@ age: 41
 ## Testing
 
 ## Credits
-
+* The comments for the products can be found in https://shopee.sg/collections/1055161 and https://shopee.sg/search?keyword=phone
