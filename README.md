@@ -109,7 +109,6 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Body | [Body](./api-documentation/12-login-body.md) |
 | Parameters | [Parameters](./api-documentation/12a-login-params.md) |
 | Expected Response | [Output](./api-documentation/12b-login-response.md) |
-</details>
 
 | Title | Retrieve the profile of the user |
 | --- | --- |
@@ -118,6 +117,8 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Body | N/A |
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/13-user-profile-response.md) |
+</details>
+
 ## Testing
 
 ## Credits
