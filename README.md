@@ -36,7 +36,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Endpoint Path | /products?brand=brand_name_placeholder |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | Output |
+| Expected Response | [Output](./api-documentation/query-strings/01-get-brand.md) |
 
 | Title | Retrieve products which prices are less than or equal to the given amount by the user |
 | --- | --- |
@@ -44,7 +44,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Endpoint Path | /products?price_less_than=price_placeholder |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | Output |
+| Expected Response | [Output](./api-documentation/query-strings/02-price-less-than.md) |
 
 | Title | Retrieve products with sales more than or equal to the given amount |
 | --- | --- |
@@ -52,7 +52,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Endpoint Path | /products?min_sold?=amount_sold_placeholder |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | Output |
+| Expected Response | [Output](./api-documentation/query-strings/03-min-sold.md) |
 
 | Title | Retrieve products that matches the country it ships from |
 | --- | --- |
@@ -60,15 +60,8 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Endpoint Path | /products?ships_from=country_placeholder |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | Output |
+| Expected Response | [Output](./api-documentation/query-strings/04-ships-from.md) |
 
-| Title | Retrieve products that are either older or newer than the provided year |
-| --- | --- |
-| Method | GET |
-| Endpoint Path | /products?exclude_year=year_placeholder |
-| Body | N/A |
-| Parameters | N/A |
-| Expected Response | Output |
 
 | Title | Filter products by stock |
 | --- | --- |
