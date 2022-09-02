@@ -236,6 +236,7 @@ age: 41
 <details>
     <summary> See test cases </summary> 
  Notes: 
+   
 * The user should have already accomplished the following:
    * Have signed up for an account
    * Acquire the access token through logging in to perform CRUD operations on endpoints
