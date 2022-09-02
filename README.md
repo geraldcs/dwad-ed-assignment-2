@@ -9,7 +9,10 @@ Gadget Hub is a place where people can purchase, discuss, and inquire anything g
 In this modern day and age, a product is only a finger tip away. With the use of advanced technologies, purchasing things have never been easier. 
 
 ## Features
-
+### Major Features 
+*
+### Limitations 
+*
 ## Sample Mongo Documents 
 <details>
     <summary> See sample documents </summary> <br>
