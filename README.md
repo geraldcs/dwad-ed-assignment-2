@@ -259,7 +259,7 @@ age: 41
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/01-default-route.md) |
 
-2. Testing GET methods
+2. Searhing for all the products listed
    * make sure that the method is set to GET
    * remove any headers
    * type in the address bar: `http://localhost:portnumber/products`
