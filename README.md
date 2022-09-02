@@ -30,6 +30,14 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/02-retrieve-all-products.md) |
 
+| Title | Retrieve a product’s brand name  |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products?brand=brand_name_placeholder |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | Output |
+
 | Title | Retrieve products which prices are less than or equal to the given amount by the user |
 | --- | --- |
 | Method | GET |
