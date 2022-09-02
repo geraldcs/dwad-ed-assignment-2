@@ -94,6 +94,14 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/10-delete-embed-body.md) |
 
+| Title | Creates a new user |
+| --- | --- |
+| Method | POST |
+| Endpoint Path | /users |
+| Body | [Body](./api-documentation/11-create-user-body.md) |
+| Parameters | [Parameters](./api-documentation/11-create-user-params.md) |
+| Expected Response | [Output](./api-documentation/11-create-user-response.md) |
+
 </details>
 
 ## Testing
