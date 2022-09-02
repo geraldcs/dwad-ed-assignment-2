@@ -1,1 +1,1 @@
-* ?brand=brand_name = This should be replaced with a product's brand name that you want to find
+* ?brand=brand_name = Search products through their brand names
