@@ -242,11 +242,16 @@ age: 41
 * If a user wishes to get the access token, they can refer to the steps below
 
 1. Testing the default endpoint 
-   * open Advanced REST Client
+   * in your Express application, make sure to start the server by typing `nodemon`
+   * open Advanced REST Client app
    * make sure that the method is set to GET
-      * remove any headers
-   * type in the address bar: http://localhost:<portnumber>/
+   * remove any headers
+   * type in the address bar: `http://localhost:portnumber/`
    * please note that the testing/editing is done on a local machine, if the user chooses to use Gitpod, simply replace the word `localhost`
+   * click the arrow button to send the request
+   * the expected response would be a status 200, signifying that the server is up and running
+   * in the index.js, I have set a JSON object as a response (refer to the expected response to see the actual result)
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | / |
@@ -254,6 +259,13 @@ age: 41
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/01-default-route.md) |
 
+2. Testing GET methods
+   * make sure that the method is set to GET
+   * remove any headers
+   * type in the address bar: `http://localhost:portnumber/products`
+   * click the arrow button to send the request
+   * inside the Response section, it will return an array of objects containing the product and its information
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /products |
@@ -261,6 +273,14 @@ age: 41
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/02-retrieve-all-products.md) |
 
+3. Searching for a brand 'Apple' 
+   * make sure that the method is set to GET
+   * remove any headers
+   * the query string starts after the question mark
+   * query string allows the user to write out an object in a string format
+   * since we're looking for {brand: Apple}, type in the address bar: `http://localhost:portnumber?brand=apple`
+   * the response should be a list of produts with 'Apple' as the brand.
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /products?brand=brand_name|
