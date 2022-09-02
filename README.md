@@ -116,7 +116,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | GET |
 | Endpoint Path | /products/:productId/product_info |
 | Body | N/A |
-| Parameters | N/A |
+| Parameters | [Parameters](./api-documentation/08a-retrieve-info-params.md) |
 | Expected Response | [Output](./api-documentation/08-retrieve-info.md) |
 
 | Title | Update an embedded document (inside the comments field) |
