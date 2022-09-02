@@ -241,6 +241,12 @@ age: 41
    * Acquire the access token through logging in to perform CRUD operations on endpoints
 * If a user wishes to get the access token, they can refer to the steps below
 
+1. Testing the default endpoint 
+   * open Advanced REST Client
+   * make sure that the method is set to GET
+      * remove any headers
+   * type in the address bar: http://localhost:<portnumber>/
+   * please note that the testing/editing is done on a local machine, if the user chooses to use Gitpod, simply replace the word `localhost`
 | Method | GET |
 | --- | --- |
 | Endpoint Path | / |
@@ -379,7 +385,7 @@ age: 41
    * Used to store the products and user collection
 * Express.js
    * Standard server framework for Node.js
-* Advanced Rest Client
+* Advanced REST Client
    * Used for testing routes and performing CRUD operations
 
 ## Credits
