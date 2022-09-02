@@ -12,8 +12,8 @@ In this modern day and age, a product is only a finger tip away. With the use of
 
 ## Sample Mongo Documents 
 <details>
-    <summary> See sample documents </summary> <br>
-    Sample document from the 'products' collection: <br>
+    <summary> See sample documents </summary> 
+    Sample document from the 'products' collection: 
  
 ``````
 "category": "mobile",
@@ -55,7 +55,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 
 ## API Documentation
 <details>
-    <summary> See entire documentation </summary> <br>
+    <summary> See entire documentation </summary>
 
 | Title | Default route |
 | --- | --- |
