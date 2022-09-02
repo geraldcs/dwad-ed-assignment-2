@@ -50,8 +50,9 @@ In this modern day and age, a product is only a finger tip away. With the use of
     }
     ]    
 ``````
-    <br>
-    Sample document from 'users' collection:
+
+    
+Sample document from 'users' collection:
 ``````
 name: "Tuco Salamanca",
 email: "tuco.salamanca321@gmail.com",
