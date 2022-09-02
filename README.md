@@ -273,7 +273,7 @@ age: 41
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/02-retrieve-all-products.md) |
 
-3. Searching for a brand 'Apple' 
+3. Searching for a brand called 'Apple' 
    * make sure that the method is set to GET
    * remove any headers
    * the query string starts after the question mark
