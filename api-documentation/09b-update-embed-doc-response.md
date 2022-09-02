@@ -1,7 +1,7 @@
 ```
 {
   "message": "Comment has been updated",
-  "products": {
+  "comment": {
     "acknowledged": true,
     "modifiedCount": 1,
     "upsertedId": null,

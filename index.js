@@ -268,7 +268,7 @@ async function main() {
 
         res.json({
             'message': "Comment has been updated",
-            "products": products
+            "comment": products
         })
     })
 
