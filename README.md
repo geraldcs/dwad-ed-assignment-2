@@ -99,11 +99,25 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | POST |
 | Endpoint Path | /users |
 | Body | [Body](./api-documentation/11-create-user-body.md) |
-| Parameters | [Parameters](./api-documentation/11-create-user-params.md) |
-| Expected Response | [Output](./api-documentation/11-create-user-response.md) |
+| Parameters | [Parameters](./api-documentation/11a-create-user-params.md) |
+| Expected Response | [Output](./api-documentation/11b-create-user-response.md) |
 
+| Title | Allows the user to login |
+| --- | --- |
+| Method | POST |
+| Endpoint Path | /login |
+| Body | [Body](./api-documentation/12-login-body.md) |
+| Parameters | [Parameters](./api-documentation/12a-login-params.md) |
+| Expected Response | [Output](./api-documentation/12b-login-response.md) |
 </details>
 
+| Title | Retrieve the profile of the user |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /user/:userId |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | [Output](./api-documentation/13-user-profile-response.md) |
 ## Testing
 
 ## Credits
