@@ -125,7 +125,7 @@ async function main() {
     })
 
     // create a document
-    app.post('/products', authVerificationJWT,async function (req, res) {
+    app.post('/products', authVerificationJWT, async function (req, res) {
         const products = await db.collection('products').insertOne({
             "category": req.body.category,
             "brand": req.body.brand,
