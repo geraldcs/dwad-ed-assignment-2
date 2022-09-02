@@ -38,7 +38,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/query-strings/01-get-brand.md) |
 
-| Title | Retrieve products which prices are less than or equal to the given amount by the user |
+| Title | Retrieve products with prices that are less than or equal to the given amount by the user |
 | --- | --- |
 | Method | GET |
 | Endpoint Path | /products?price_less_than=price_placeholder |
@@ -69,7 +69,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Endpoint Path | /products?stock=stock_number_placeholder |
 | Body | N/A |
 | Parameters | N/A |
-| Expected Response | [Output](./api-documentation/query-strings/05-min_sold.md) |
+| Expected Response | [Output](./api-documentation/query-strings/05-stocks.md) |
 
 | Title | Create a new product review |
 | --- | --- |
