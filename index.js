@@ -77,7 +77,7 @@ async function main() {
                 }
             }
 
-            // aims to bring back products with more than or equal to the given amount of reviews
+            // bring back products with sales more than or equal to the given amount
             if (req.query.min_sold) {
                 criteria.amountSold = {
                     '$gte': parseInt(req.query.min_sold)
@@ -250,7 +250,6 @@ async function main() {
         res.json(products);
 
     })
-
 
     // update an embedded document inside the comments field
     app.put('/comments/:commentId', authVerificationJWT, async function (req, res) {

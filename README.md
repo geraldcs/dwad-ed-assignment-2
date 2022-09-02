@@ -30,6 +30,46 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Parameters | N/A |
 | Expected Response | [Output](./api-documentation/02-retrieve-all-products.md) |
 
+| Title | Retrieve products which prices are less than or equal to the given amount by the user |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products?price_less_than=price_placeholder |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | Output |
+
+| Title | Retrieve products with sales more than or equal to the given amount |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products?min_sold?=amount_sold_placeholder |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | Output |
+
+| Title | Retrieve products that matches the country it ships from |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products?ships_from=country_placeholder |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | Output |
+
+| Title | Retrieve products that are either older or newer than the provided year |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products?exclude_year=year_placeholder |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | Output |
+
+| Title | Filter products by stock |
+| --- | --- |
+| Method | GET |
+| Endpoint Path | /products?stock=stock_number_placeholder |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | Output |
+
 | Title | Create a new product review |
 | --- | --- |
 | Method | POST |
