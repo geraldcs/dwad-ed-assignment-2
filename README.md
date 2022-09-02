@@ -9,12 +9,33 @@ Gadget Hub is a place where people can purchase, discuss, and inquire anything g
 In this modern day and age, a product is only a finger tip away. With the use of advanced technologies, purchasing things have never been easier. 
 
 ## Features
+### Major Features 
+* Display list of products available
+* Retrieve product information
+    * Able to the product's brand name, stocks
+* Filter through products
+    * Produts can be filtered through their prices, amount of stocks available, amount sold, shipment location, and year of release
+* Update a doccument/embedded document
+    * Able to update the doument's fields and the field of its embedded documents
+* Delete a document/embedded document
+    * The product's listing, information and reviews can be as well as its embeded documents
+* Signing up
+    * A user can sign up with a valid email, which is necessary for acquiring the access token
+* Logging in
+    * A user can login, provided that they already signed up
+* Delete a user
+    * A user can can be removed through their unique ID
+
+### Limitations and Pending Implementation
+* Lack of email verification 
+   * The API cannot verify if the provided email during signup is a valid email or if it's an email that's already been used 
 
 ## Sample Mongo Documents 
 <details>
-    <summary> See sample documents </summary>
-    Sample document from the 'products' collection: 
-```
+    <summary> See sample documents </summary> <br>
+Sample document from the 'products' collection: 
+
+``````
 "category": "mobile",
 "brand": "Huawei",
 "productName": "Huawei Mate X2",
@@ -48,11 +69,22 @@ In this modern day and age, a product is only a finger tip away. With the use of
         "likes": 182 
     }
     ]    
-```
+``````
+
+    
+Sample document from 'users' collection:
+``````
+name: "Tuco Salamanca",
+email: "tuco.salamanca321@gmail.com",
+password: "ihatechilipowder",
+age: 41
+``````
 </details>
+
+
 ## API Documentation
 <details>
-    <summary> See entire documentation </summary>
+    <summary> See entire documentation </summary> <br>
 
 | Title | Default route |
 | --- | --- |
@@ -202,5 +234,18 @@ In this modern day and age, a product is only a finger tip away. With the use of
 
 ## Testing
 
-## Credits
+## Design
+### Technologies Used 
+* Node.js
+   * Backend framework
+   * Allows the usage of npm
+* MongoDB
+   * NoSQL document-oriented database program
+   * Used to store the products and user collection
+* Express.js
+   * Standard server framework for Node.js
+* Advanced Rest Client
+   * Used for testing routes and performing CRUD operations
 
+## Credits
+* The comments for the products can be found in https://shopee.sg/collections/1055161 and https://shopee.sg/search?keyword=phone
