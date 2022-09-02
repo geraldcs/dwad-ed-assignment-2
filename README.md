@@ -235,11 +235,12 @@ age: 41
 ## Testing
 <details>
     <summary> See test cases </summary> 
-   
+ Notes: 
 * The user should have already accomplished the following:
    * Have signed up for an account
    * Acquire the access token through logging in to perform CRUD operations on endpoints
-* If a user wishes to get the access token, they can refer to the steps below
+* `portnumber` is simply a placeholder, change it according to the corresponding number on your local mahine
+* If a user wishes to get the access token, they can refer to test case # below
 
 1. Testing the default endpoint 
    * in your Express application, make sure to start the server by typing `nodemon`
