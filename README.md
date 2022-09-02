@@ -33,9 +33,9 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Title | Retrieve a product’s brand name  |
 | --- | --- |
 | Method | GET |
-| Endpoint Path | /products?brand=brand_name_placeholder |
+| Endpoint Path | /products?brand=brand_name|
 | Body | N/A |
-| Parameters | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/01a-get-brand-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/01-get-brand.md) |
 
 | Title | Retrieve products with prices that are less than or equal to the given amount by the user |
