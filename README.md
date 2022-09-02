@@ -86,6 +86,14 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Parameters | [Parameters](./api-documentation/09a-update-embed-docs-params.md) |
 | Expected Response | [Output](./api-documentation/09b-update-embed-doc-response.md) |
 
+| Title | Delete an embedded document (comment) |
+| --- | --- |
+| Method | DELETE |
+| Endpoint Path | /comments/:commentId |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | [Output](./api-documentation/10-delete-embed-body.md) |
+
 </details>
 
 ## Testing
