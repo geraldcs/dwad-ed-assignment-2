@@ -10,9 +10,22 @@ In this modern day and age, a product is only a finger tip away. With the use of
 
 ## Features
 ### Major Features 
-*
-### Limitations 
-*
+* Display list of products available
+* Retrieve product information
+    * Able to the product's brand name, stocks
+* Filter through products
+    * Produts can be filtered through their prices, amount of stocks available, amount sold, shipment location, and year of release
+* Update a doccument/embedded document
+    * Able to update the doument's fields and the field of its embedded documents
+* Delete a document/embedded document
+    * The product's listing, information and reviews can be as well as its embeded documents
+* Signing up
+    * A user can sign up with a valid email, which is necessary for acquiring the access token
+* Logging In
+    * A user can login, provided that they already registered
+* Delete User
+    * A user can can be removed through their unique ID
+    
 ## Sample Mongo Documents 
 <details>
     <summary> See sample documents </summary> <br>
