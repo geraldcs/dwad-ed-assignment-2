@@ -156,7 +156,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | GET |
 | Endpoint Path | /user/:userId |
 | Body | N/A |
-| Parameters | N/A |
+| Parameters | [Parameters](./api-documentation/13-user-profile-response-params.md) |
 | Expected Response | [Output](./api-documentation/13-user-profile-response.md) |
 </details>
 
