@@ -236,6 +236,132 @@ age: 41
 <details>
     <summary> See test cases </summary>
 
+| Method | GET |
+| --- | --- |
+| Endpoint Path | / |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | [Output](./api-documentation/01-default-route.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products |
+| Body | N/A |
+| Parameters | N/A |
+| Expected Response | [Output](./api-documentation/02-retrieve-all-products.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products?brand=brand_name|
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/01a-get-brand-params.md) |
+| Expected Response | [Output](./api-documentation/query-strings/01-get-brand.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products?price_less_than=price |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/02a-price-less-than-params.md) |
+| Expected Response | [Output](./api-documentation/query-strings/02-price-less-than.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products?min_sold?=amount_sold |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/03-min-sold-params.md) |
+| Expected Response | [Output](./api-documentation/query-strings/03-min-sold.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products?ships_from=country |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/04-ships-from-params.md) |
+| Expected Response | [Output](./api-documentation/query-strings/04-ships-from.md) |
+
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products?stock=stock_number |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/05-stocks-params.md) |
+| Expected Response | [Output](./api-documentation/query-strings/05-stocks.md) |
+
+| Method | POST |
+| --- | --- |
+| Endpoint Path | /products |
+| Body | [Body](./api-documentation/03a-create-new-product.md) |
+| Parameters | [Parameters](./api-documentation/03b-create-new-product-review-parameters.md) |
+| Expected Response | [Output](./api-documentation/03-create-new-output.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products/:productId |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/04-get-info-product-id-params.md) |
+| Expected Response | [Output](./api-documentation/04-get-info-product-id.md) |
+
+| Method | PUT |
+| --- | --- |
+| Endpoint Path | /products/:productId |
+| Body | [Body](./api-documentation/05a-update-document-body.md) |
+| Parameters | [Parameters](./api-documentation/05-update-document-params.md) |
+| Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
+
+| Method | DELETE |
+| --- | --- |
+| Endpoint Path | /products/:productId |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/06-delete-params.md) |
+| Expected Response | [Output](./api-documentation/06-delete-response.md) |
+
+| Method | POST |
+| --- | --- |
+| Endpoint Path | /products/:productId/coments |
+| Body | [Body](./api-documentation/07-create-embed-doc-body.md) |
+| Parameters | [Parameters](./api-documentation/07a-create-embed-doc-params.md) |
+| Expected Response | [Output](./api-documentation/07b-create-embed-doc-response.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /products/:productId/product_info |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/08a-retrieve-info-params.md) |
+| Expected Response | [Output](./api-documentation/08-retrieve-info.md) |
+
+| Method | PUT |
+| --- | --- |
+| Endpoint Path | /comments/:commentId |
+| Body | [Body](./api-documentation/09-update-embed-doc.md) |
+| Parameters | [Parameters](./api-documentation/09a-update-embed-docs-params.md) |
+| Expected Response | [Output](./api-documentation/09b-update-embed-doc-response.md) |
+
+| Method | DELETE |
+| --- | --- |
+| Endpoint Path | /comments/:commentId |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/10a-delete-embed-body-params.md) |
+| Expected Response | [Output](./api-documentation/10-delete-embed-body.md) |
+
+| Method | POST |
+| --- | --- |
+| Endpoint Path | /users |
+| Body | [Body](./api-documentation/11-create-user-body.md) |
+| Parameters | [Parameters](./api-documentation/11a-create-user-params.md) |
+| Expected Response | [Output](./api-documentation/11b-create-user-response.md) |
+
+| Method | POST |
+| --- | --- |
+| Endpoint Path | /login |
+| Body | [Body](./api-documentation/12-login-body.md) |
+| Parameters | [Parameters](./api-documentation/12a-login-params.md) |
+| Expected Response | [Output](./api-documentation/12b-login-response.md) |
+
+| Method | GET |
+| --- | --- |
+| Endpoint Path | /user/:userId |
+| Body | N/A |
+| Parameters | [Parameters](./api-documentation/13-user-profile-response-params.md) |
+| Expected Response | [Output](./api-documentation/13-user-profile-response.md) |
 </details>    
 
 ## Design
