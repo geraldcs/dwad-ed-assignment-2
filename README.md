@@ -41,9 +41,9 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Title | Retrieve products with prices that are less than or equal to the given amount by the user |
 | --- | --- |
 | Method | GET |
-| Endpoint Path | /products?price_less_than=price_placeholder |
+| Endpoint Path | /products?price_less_than=price |
 | Body | N/A |
-| Parameters | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/02a-price-less-than-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/02-price-less-than.md) |
 
 | Title | Retrieve products with sales more than or equal to the given amount |
