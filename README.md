@@ -240,6 +240,7 @@ age: 41
 * The user should have already accomplished the following:
    * Have signed up for an account
    * Acquire the access token through logging in to perform CRUD operations on endpoints
+   * Inside ARC, the authorzation should be set to Bearer and the access token is already added
 * `portnumber` is simply a placeholder, change it according to the corresponding number on your local mahine
 * If a user wishes to get the access token, they can refer to test case # below
 
@@ -346,7 +347,14 @@ age: 41
 | Parameters | [Parameters](./api-documentation/query-strings/05-stocks-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/05-stocks.md) |
 
-8. 
+8. Creating a new product
+   * set method to POST 
+   * switch the tab from HEADERS to BODY
+   * make sure that it's set on Raw input and the Mime type is JSON
+   * inside the BODY section, create `{}`, fill in the fields (refer to the Body below)
+   *  make sure that the address bar is set to `http://localhost:portnumber/products`
+   * send in the request 
+   * the response will be a JSON object with the message: "New product review has been added", and below it is the inserted ID
    
 | Method | POST |
 | --- | --- |
@@ -355,7 +363,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/03b-create-new-product-review-parameters.md) |
 | Expected Response | [Output](./api-documentation/03-create-new-output.md) |
 
-9. 
+9. Retrieving an ID 
+   * switch the method back to 
    
 | Method | GET |
 | --- | --- |
