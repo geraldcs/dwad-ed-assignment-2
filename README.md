@@ -279,7 +279,7 @@ age: 41
    * the query string starts after the question mark
    * query string allows the user to write out an object in a string format
    * since we're looking for {brand: Apple}, type in the address bar: `http://localhost:portnumber?brand=apple`
-   * the response should be a list of produts with 'Apple' as the brand.
+   * the response will be an array of objects containing the produts with 'Apple' as the brand.
    
 | Method | GET |
 | --- | --- |
@@ -288,12 +288,25 @@ age: 41
 | Parameters | [Parameters](./api-documentation/query-strings/01a-get-brand-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/01-get-brand.md) |
 
+4. Searching for a product that's less than 40,000
+   * make sure that the method is set to GET
+   * remove any headers
+   * since we're looking for a product that is less than or equal to 40,000, type in the address bar: `http://localhost:portnumber?price_less_than=40000`
+   * inside the Response section, it will return an array of objects containing the product that meets the criteria along with its information
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /products?price_less_than=price |
 | Body | N/A |
 | Parameters | [Parameters](./api-documentation/query-strings/02a-price-less-than-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/02-price-less-than.md) |
+
+5. Searching for products that sold at least 10 units
+   * make sure that the method is set to GET
+   * remove any headers
+   * since we're looking for a product that sold at least 10 units, type in the address bar: /products?min_sold?=10
+      * make sure that the query inside the express application is in ParseInt() for it to view as an integer
+   *  inside the Response section, it will return an array of objects containing the 'iPhone 12' and 'iPhone 13 Pro Max'
 
 | Method | GET |
 | --- | --- |
@@ -302,6 +315,10 @@ age: 41
 | Parameters | [Parameters](./api-documentation/query-strings/03-min-sold-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/03-min-sold.md) |
 
+6. Searching for a product that ships from China 
+   * make sure that the method is set to GET
+   * remove any headers
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /products?ships_from=country |
