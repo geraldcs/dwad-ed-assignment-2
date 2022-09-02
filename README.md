@@ -106,7 +106,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Title | Filter products by stock |
 | --- | --- |
 | Method | GET |
-| Endpoint Path | /products?stock=stock_number_placeholder |
+| Endpoint Path | /products?stock=stock_number |
 | Body | N/A |
 | Parameters | [Parameters](./api-documentation/query-strings/05-stocks-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/05-stocks.md) |
@@ -132,7 +132,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | PUT |
 | Endpoint Path | /products/:productId |
 | Body | [Body](./api-documentation/05a-update-document-body.md) |
-| Parameters | [Parameters](./api-documentation/05-update-document-params) |
+| Parameters | [Parameters](./api-documentation/05-update-document-params.md) |
 | Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
 
 | Title | Delete an document by its ID |
@@ -203,5 +203,4 @@ In this modern day and age, a product is only a finger tip away. With the use of
 ## Testing
 
 ## Credits
-Sources:
-The comments for the documents in the products ccollection can be found in https://shopee.sg/collections/1055161 and https://shopee.sg/search?keyword=phone
+

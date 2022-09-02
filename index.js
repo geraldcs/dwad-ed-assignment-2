@@ -62,7 +62,7 @@ async function main() {
     app.get('/products', async function (req, res) {
         try {
             let criteria = {}
-            // brings back the results for the brand 
+            // retrieve a product’s brand name 
             if (req.query.brand) {
                 criteria.brand = {
                     "$regex": req.query.brand,
@@ -70,21 +70,21 @@ async function main() {
                 }
             }
 
-            // aims to bring back phones with less than the given price
+            // retrieve products with prices that are less than or equal to the given amount by the user
             if (req.query.price_less_than) {
                 criteria.pricePhp = {
                     '$lte': parseInt(req.query.price_less_than)
                 }
             }
 
-            // bring back products with sales more than or equal to the given amount
+            // retrieve products with sales more than or equal to the given amount
             if (req.query.min_sold) {
                 criteria.amountSold = {
                     '$gte': parseInt(req.query.min_sold)
                 }
             }
 
-            // brings back phones that matches the country it ships from
+            // retrieve products that matches the country it ships from
             if (req.query.ships_from) {
                 criteria.shipsFrom = {
                     '$all': [
@@ -124,7 +124,7 @@ async function main() {
         }
     })
 
-    // create document
+    // create a document
     app.post('/products', authVerificationJWT,async function (req, res) {
         const products = await db.collection('products').insertOne({
             "category": req.body.category,
