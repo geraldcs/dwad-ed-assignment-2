@@ -66,7 +66,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Title | Filter products by stock |
 | --- | --- |
 | Method | GET |
-| Endpoint Path | /products?stock=stock_number_placeholder |
+| Endpoint Path | /products?stock=stock_number |
 | Body | N/A |
 | Parameters | [Parameters](./api-documentation/query-strings/05-stocks-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/05-stocks.md) |
