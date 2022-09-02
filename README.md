@@ -336,7 +336,7 @@ age: 41
 7. Filter products according to the amount of stocks
    * this route uses MongoDB operator '$eq', therefore it will return an exact amount, or will return nothing if it does not find any value to match
    * to test, look for products who only has 10 units 
-   * type in `http://localhost:portnumber/products?stock=10`
+   * type in the address bar: `http://localhost:portnumber/products?stock=10`
    * after sending the request, it will return 'Oppo Reno 3' and its product information
    
 | Method | GET |
@@ -346,6 +346,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/query-strings/05-stocks-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/05-stocks.md) |
 
+8. 
+   
 | Method | POST |
 | --- | --- |
 | Endpoint Path | /products |
@@ -353,6 +355,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/03b-create-new-product-review-parameters.md) |
 | Expected Response | [Output](./api-documentation/03-create-new-output.md) |
 
+9. 
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /products/:productId |
@@ -360,6 +364,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/04-get-info-product-id-params.md) |
 | Expected Response | [Output](./api-documentation/04-get-info-product-id.md) |
 
+10. 
+   
 | Method | PUT |
 | --- | --- |
 | Endpoint Path | /products/:productId |
@@ -367,6 +373,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/05-update-document-params.md) |
 | Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
 
+11.
+   
 | Method | DELETE |
 | --- | --- |
 | Endpoint Path | /products/:productId |
@@ -374,6 +382,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/06-delete-params.md) |
 | Expected Response | [Output](./api-documentation/06-delete-response.md) |
 
+12. 
+   
 | Method | POST |
 | --- | --- |
 | Endpoint Path | /products/:productId/coments |
@@ -381,6 +391,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/07a-create-embed-doc-params.md) |
 | Expected Response | [Output](./api-documentation/07b-create-embed-doc-response.md) |
 
+13. 
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /products/:productId/product_info |
@@ -388,6 +400,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/08a-retrieve-info-params.md) |
 | Expected Response | [Output](./api-documentation/08-retrieve-info.md) |
 
+14. 
+   
 | Method | PUT |
 | --- | --- |
 | Endpoint Path | /comments/:commentId |
@@ -395,6 +409,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/09a-update-embed-docs-params.md) |
 | Expected Response | [Output](./api-documentation/09b-update-embed-doc-response.md) |
 
+15. 
+   
 | Method | DELETE |
 | --- | --- |
 | Endpoint Path | /comments/:commentId |
@@ -402,6 +418,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/10a-delete-embed-body-params.md) |
 | Expected Response | [Output](./api-documentation/10-delete-embed-body.md) |
 
+16.
+   
 | Method | POST |
 | --- | --- |
 | Endpoint Path | /users |
@@ -409,6 +427,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/11a-create-user-params.md) |
 | Expected Response | [Output](./api-documentation/11b-create-user-response.md) |
 
+17.
+   
 | Method | POST |
 | --- | --- |
 | Endpoint Path | /login |
@@ -416,6 +436,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/12a-login-params.md) |
 | Expected Response | [Output](./api-documentation/12b-login-response.md) |
 
+18. 
+   
 | Method | GET |
 | --- | --- |
 | Endpoint Path | /user/:userId |
