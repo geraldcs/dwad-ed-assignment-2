@@ -50,7 +50,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
     }
     ]    
 ``````
-    
+    <br>
     Sample document from 'users' collection:
 ``````
 name: "Tuco Salamanca",
