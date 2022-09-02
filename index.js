@@ -97,15 +97,6 @@ async function main() {
                 }
             }
 
-            // excludes phone in a given year 
-            if (req.query.exclude_year) {
-                criteria.productInfo = {
-                    '$not': {
-                        '$in': [req.query.exclude_year]
-                    }
-                }
-            }
-
             // filter by stock, should the user want to search items that are currently in stock or if the user wishes to see which items aren't scarce
             if (req.query.stock) {
                 criteria.stock = {
@@ -118,7 +109,9 @@ async function main() {
                     '_id': 1,
                     'brand': 1,
                     'productName': 1,
-                    'pricePhp': 1
+                    'pricePhp': 1,
+                    'amountSold': 1,
+                    'productInfo': 1
                 }
             }).toArray();
             res.json(products);
