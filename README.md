@@ -132,7 +132,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Method | DELETE |
 | Endpoint Path | /comments/:commentId |
 | Body | N/A |
-| Parameters | [Parameters](./api-documentation/) |
+| Parameters | [Parameters](./api-documentation/10a-delete-embed-body-params.md) |
 | Expected Response | [Output](./api-documentation/10-delete-embed-body.md) |
 
 | Title | Creates a new user |
