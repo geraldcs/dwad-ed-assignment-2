@@ -13,7 +13,7 @@ In this modern day and age, a product is only a finger tip away. With the use of
 ## Sample Mongo Documents 
 <details>
     <summary> See sample documents </summary> <br>
-    Sample document from the 'products' collection: 
+    Sample document from the 'products' collection: <br>
  
 ``````
 "category": "mobile",
