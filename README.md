@@ -235,6 +235,11 @@ age: 41
 ## Testing
 <details>
     <summary> See test cases </summary>
+#### Prerequisite
+* The user must already:
+   * Have signed up for an account
+   * Acquire the access token through logging in to perform CRUD operations on endpoints
+   
 
 | Method | GET |
 | --- | --- |
