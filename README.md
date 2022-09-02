@@ -364,7 +364,12 @@ age: 41
 | Expected Response | [Output](./api-documentation/03-create-new-output.md) |
 
 9. Retrieving an ID 
-   * switch the method back to 
+   * switch the method back to GET and the tab to HEADERS
+   * remove any headers
+   * copy any ObjectId from the `http://localhost:portnumber/products`
+   * paste the ObjectId and replace the `:productId` parameter    
+   * type in the address bar `http://localhost:portnumber/products/:productId`
+   * this will return all the fields of the document along with the nested objects
    
 | Method | GET |
 | --- | --- |
