@@ -264,7 +264,7 @@ age: 41
    * remove any headers
    * type in the address bar: `http://localhost:portnumber/products`
    * click the arrow button to send the request
-   * inside the Response section, it will return an array of objects containing the product and its information
+   * inside the Response section, it will return an array of objects containing the products and its information
    
 | Method | GET |
 | --- | --- |
