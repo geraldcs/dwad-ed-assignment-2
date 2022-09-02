@@ -25,7 +25,11 @@ In this modern day and age, a product is only a finger tip away. With the use of
     * A user can login, provided that they already registered
 * Delete User
     * A user can can be removed through their unique ID
-    
+
+### Limitations and Pending Implementation
+* Lack of email verification 
+   * The API cannot verify if the provided email during signup is a valid email or if it's an email that's already been used 
+
 ## Sample Mongo Documents 
 <details>
     <summary> See sample documents </summary> <br>
