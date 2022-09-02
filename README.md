@@ -14,7 +14,8 @@ In this modern day and age, a product is only a finger tip away. With the use of
 <details>
     <summary> See sample documents </summary>
     Sample document from the 'products' collection: 
-```
+ 
+``````
 "category": "mobile",
 "brand": "Huawei",
 "productName": "Huawei Mate X2",
@@ -48,8 +49,9 @@ In this modern day and age, a product is only a finger tip away. With the use of
         "likes": 182 
     }
     ]    
-```
+`````
 </details>
+
 ## API Documentation
 <details>
     <summary> See entire documentation </summary>
