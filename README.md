@@ -49,17 +49,17 @@ In this modern day and age, a product is only a finger tip away. With the use of
 | Title | Retrieve products with sales more than or equal to the given amount |
 | --- | --- |
 | Method | GET |
-| Endpoint Path | /products?min_sold?=amount_sold_placeholder |
+| Endpoint Path | /products?min_sold?=amount_sold |
 | Body | N/A |
-| Parameters | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/03-min-sold-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/03-min-sold.md) |
 
 | Title | Retrieve products that matches the country it ships from |
 | --- | --- |
 | Method | GET |
-| Endpoint Path | /products?ships_from=country_placeholder |
+| Endpoint Path | /products?ships_from=country |
 | Body | N/A |
-| Parameters | N/A |
+| Parameters | [Parameters](./api-documentation/query-strings/04-ships-from-params.md) |
 | Expected Response | [Output](./api-documentation/query-strings/04-ships-from.md) |
 
 
