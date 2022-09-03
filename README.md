@@ -351,6 +351,7 @@ age: 41
    * set method to POST 
    * switch the tab from HEADERS to BODY
    * make sure that it's set on Raw input and the Mime type is JSON
+   * forgetting to do the second and third steps, will cause the ARC to fail
    * inside the BODY section, create `{}`, fill in the fields (refer to the Body below)
    *  make sure that the address bar is set to `http://localhost:portnumber/products`
    * send in the request 
@@ -378,7 +379,15 @@ age: 41
 | Parameters | [Parameters](./api-documentation/04-get-info-product-id-params.md) |
 | Expected Response | [Output](./api-documentation/04-get-info-product-id.md) |
 
-10. 
+10. Updating field(s)
+   * switch to PUT method
+   * make sure that the Mime type is set to JSON
+   * this route can update both single and mutliple fields
+   * in this test, let's change a product's name
+   * `http://localhost/products/630eb9ee0568f3e9c5f804f8`
+   * inside the Raw input, {"productName": "Oppo Reno 3"} to change the product's name
+   * send the request
+   * a JSON object will be sent as a response (refer to the Output to see the whole message)
    
 | Method | PUT |
 | --- | --- |
@@ -458,6 +467,8 @@ age: 41
 | Body | N/A |
 | Parameters | [Parameters](./api-documentation/13-user-profile-response-params.md) |
 | Expected Response | [Output](./api-documentation/13-user-profile-response.md) |
+   
+Final notes: Doing this in POSTMAN or any similar application will yield similar results, so long as the prerequisite is met.
 </details>    
 
 ## Design
