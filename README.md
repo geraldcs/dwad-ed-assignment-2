@@ -425,7 +425,13 @@ age: 41
 | Parameters | [Parameters](./api-documentation/07a-create-embed-doc-params.md) |
 | Expected Response | [Output](./api-documentation/07b-create-embed-doc-response.md) |
 
-13. 
+13. Retrieving product info through ID
+   * switch the method back to GET and the tab to HEADERS
+   * remove any headers
+   * copy any ObjectId from the `http://localhost:portnumber/products`
+   * paste the ObjectId and replace the `:productId` parameter    
+   * type in the address bar `http://localhost:portnumber/products/:productId/product_info`
+   * this will return all the fields of the selected product along with all its fields
    
 | Method | GET |
 | --- | --- |
