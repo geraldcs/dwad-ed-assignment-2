@@ -397,8 +397,11 @@ age: 41
 | Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
 
 11. Delete a product
-   * switch to DELET method
-   * 
+   * switch to DELETE method
+   * copy any ObjectId from the `http://localhost:portnumber/products`
+   * paste the ObjectId and replace the `:productId` parameter    
+   * type in the address bar `http://localhost:portnumber/products/:productId`
+   * after sending the request, a JSON object will be sent back confirming the deletion
    
 | Method | DELETE |
 | --- | --- |
