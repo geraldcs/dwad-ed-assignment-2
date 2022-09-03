@@ -410,11 +410,17 @@ age: 41
 | Parameters | [Parameters](./api-documentation/06-delete-params.md) |
 | Expected Response | [Output](./api-documentation/06-delete-response.md) |
 
-12. 
-   
+12. Editing an embedded document (comments)
+   * switch to POST method
+   * switch the tab to BODY
+   * set Mime type to JSON
+   * inside the body, input the fields that you want to update and edit the content
+      * refer to the table below for the key-value pair sample in the Body section
+   * after sending the quest a JSON object will be sent back (refer to the Output to see the entire response)
+ 
 | Method | POST |
 | --- | --- |
-| Endpoint Path | /products/:productId/coments |
+| Endpoint Path | /products/:productId/comments |
 | Body | [Body](./api-documentation/07-create-embed-doc-body.md) |
 | Parameters | [Parameters](./api-documentation/07a-create-embed-doc-params.md) |
 | Expected Response | [Output](./api-documentation/07b-create-embed-doc-response.md) |
