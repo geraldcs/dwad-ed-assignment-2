@@ -383,7 +383,7 @@ age: 41
    * switch to PUT method
    * make sure that the Mime type is set to JSON
    * this route can update both single and mutliple fields
-   * in this test, let's change a product's name
+   * in this test, let's change a single field (product's name)
    * `http://localhost/products/630eb9ee0568f3e9c5f804f8`
    * inside the Raw input, {"productName": "Oppo Reno 3"} to change the product's name
    * send the request
@@ -396,7 +396,9 @@ age: 41
 | Parameters | [Parameters](./api-documentation/05-update-document-params.md) |
 | Expected Response | [Output](./api-documentation/05b-update-document-response.md) |
 
-11.
+11. Delete a product
+   * switch to DELET method
+   * 
    
 | Method | DELETE |
 | --- | --- |
