@@ -38,9 +38,13 @@ The goal is to create an API that can benefit people who are also interested in 
 * Delete a user
     * A user can can be removed through their unique ID
 
-### Limitations and Pending Implementation
+### Limitations 
 * Lack of email verification 
    * The API cannot verify if the provided email during signup is a valid email or if it's an email that's already been used 
+
+### Pending Implementation
+* Reply to product reviews
+   * Leaving a reply towards a product review is not yet implemented
 
 ## Sample Mongo Documents 
 <details>
