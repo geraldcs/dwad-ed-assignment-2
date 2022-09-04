@@ -472,6 +472,7 @@ age: 41
 
 16. Create a user
    * switch to POST method
+   * the URL in the address bar should be `http://localhost/comments/:commentId`
    * switch the tab to BODY
    * set Mime type to JSON
    * inside the body, input the necessary fields that you want to update and edit the content
@@ -487,6 +488,10 @@ age: 41
 
 17. Logging in
    * ensure that the user has already signed up for an account otherwise they will not be able to login
+   * the URL in the address must be `http://localhost/login`
+   * inside the BODY, there are 2 fields that are required, the `email` and the `password`
+   * the two fields must already be in the database, otherwise it won't work
+   * after sending the request, the access token will be given to the user
    
 | Method | POST |
 | --- | --- |
@@ -495,7 +500,12 @@ age: 41
 | Parameters | [Parameters](./api-documentation/12a-login-params.md) |
 | Expected Response | [Output](./api-documentation/12b-login-response.md) |
 
-18. 
+18. Retrieving user profile
+   * switch the method back to GET and the tab to HEADERS
+   * remove any headers
+   * copy the ObjectId from the user that we want to retrieve 
+   * paste the ObjectId and replace the `:userId` parameter    
+   * this will return the email, id, and message of the chosen user
    
 | Method | GET |
 | --- | --- |
