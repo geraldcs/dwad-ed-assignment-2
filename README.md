@@ -11,7 +11,9 @@ In this modern age, shopping has become easier due to e-commerce. Online shoppin
 The API (Application Programming Interface) offers a simple solution by utilizing CRUD (Create, Read, Update, and Delete) operations. It allows the user to retrieve necessary information, create a new listing, update a product, and delete one. This API can both be used for the average user and developers. 
 
 ### Targget Audiences 
-
+1. As a careful consumer, I want to see if the product I'm interested in has positive reviews so that I may buy it.
+2. As an avid user of the website, I want to compare different comments from competing brands so I have an insight on which has the best offer.
+3. As an online shopaholic, I want others to like my reviews so that I will have the satisfaction of knowing that other people find my review helpful/useful.
 
 ### Organization's Goals 
 The goal is to create an API that can benefit people who are also interested in reviewing certain products. This can also help people who are interested in making their own e-commerce website wherein their users can post products and submit reviews.
