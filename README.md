@@ -514,7 +514,7 @@ age: 41
 | Parameters | [Parameters](./api-documentation/13-user-profile-response-params.md) |
 | Expected Response | [Output](./api-documentation/13-user-profile-response.md) |
    
-Final notes: Doing this in POSTMAN or any similar application will yield similar results, so long as the prerequisite is met.
+Final notes: Doing this in Postman or any similar application will yield similar results, so long as the prerequisite is met.
 </details>    
 
 ## Design
