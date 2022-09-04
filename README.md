@@ -440,7 +440,15 @@ age: 41
 | Parameters | [Parameters](./api-documentation/08a-retrieve-info-params.md) |
 | Expected Response | [Output](./api-documentation/08-retrieve-info.md) |
 
-14. 
+14. Editing an object inside an array
+   * switch to PUT method
+   * set the Mime type is set to JSON
+   * this route can update both single and mutliple fields
+   * in this test, we'll be changing all the fields of an embedded document
+   * `http://localhost/comments/:commentId`
+   * inside the Raw input, input the updated field and value (refer to BODY below)
+   * send the request
+   * a JSON object will be sent as a response confirming the update (refer to the Output to see the whole message)
    
 | Method | PUT |
 | --- | --- |
@@ -449,7 +457,11 @@ age: 41
 | Parameters | [Parameters](./api-documentation/09a-update-embed-docs-params.md) |
 | Expected Response | [Output](./api-documentation/09b-update-embed-doc-response.md) |
 
-15. 
+15. Deleting an object inside the array
+   * switch to DELETE method
+   * `http://localhost/comments/:commentId`, to select which embedded document you want to update
+   * send the request
+   * a JSON object will be sent as a response confirmin the deletion (refer to the Output to see the whole message)
    
 | Method | DELETE |
 | --- | --- |
@@ -458,7 +470,13 @@ age: 41
 | Parameters | [Parameters](./api-documentation/10a-delete-embed-body-params.md) |
 | Expected Response | [Output](./api-documentation/10-delete-embed-body.md) |
 
-16.
+16. Create a user
+   * switch to POST method
+   * switch the tab to BODY
+   * set Mime type to JSON
+   * inside the body, input the necessary fields that you want to update and edit the content
+      * refer to the table below for the key-value pair sample in the Body section
+   * after sending the request, a JSON object will be sent back (refer to the Output to see the entire response)
    
 | Method | POST |
 | --- | --- |
@@ -467,7 +485,8 @@ age: 41
 | Parameters | [Parameters](./api-documentation/11a-create-user-params.md) |
 | Expected Response | [Output](./api-documentation/11b-create-user-response.md) |
 
-17.
+17. Logging in
+   * ensure that the user has already signed up for an account otherwise they will not be able to login
    
 | Method | POST |
 | --- | --- |
