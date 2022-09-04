@@ -8,15 +8,15 @@ Gadget Hub is a one-stop for all your gadget needs. Gadget Hub contains a vast a
 ### Context and Justification
 In this modern age, shopping has become easier due to e-commerce. Online shopping has become a staple in the modern life and has even aided in delivering the needs of people amidst the COVID-19 Pandemic. Having to purchase a product online without leaving the front door can save both time and energy. However, there has been a surge of online shopping apps that are sometimes too broad or too cluttered for the common user. This can become challenging or tedious for both the inexperienced and tech savvy alike. 
 
-The API (Application Programming Interface) offers a simple solution by utilizing CRUD (Create, Read, Update, and Delete) operations. It allows the user to retrieve necessary information, create a new listing, update a product, and delete one. This API can both be used for the average user and developers. 
-
-### Targget Audiences 
-* As a careful consumer, I want to see if the product I'm interested in has positive reviews so that I may buy it.
-* As an avid user of the website, I want to compare different comments from competing brands so I have an insight on which has the best offer.
-* As an online shopaholic, I want others to like my reviews so that I will have the satisfaction of knowing that other people find my review helpful/useful.
+The API (Application Programming Interface) is capable of performing CRUD (Create, Read, Update, and Delete) operations. It allows the user to retrieve necessary information, create a new listing, update a product, interact with reviews (give likes, updates, and submit) and delete one. This API can both be used for the average user and developers. 
 
 ### Organization's Goals 
 The goal is to create an API that can benefit people who are also interested in reviewing certain products. This can also help people who are interested in making their own e-commerce website wherein their users can post products and submit reviews.
+
+### Target Audiences 
+* As a careful consumer, I want to see if the product I'm interested in has positive reviews so that I may buy it.
+* As an avid user of the website, I want to compare different comments from competing brands so I have an insight on which has the best offer.
+* As an online shopaholic, I want others to like my reviews so that I will have the satisfaction of knowing that other people find my review helpful/useful.
 
 ## Features
 ### Major Features 
