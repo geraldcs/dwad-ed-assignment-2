@@ -14,9 +14,11 @@ The API (Application Programming Interface) is capable of performing CRUD (Creat
 The goal is to create an API that can benefit people who are also interested in reviewing certain products. This can also help people who are interested in making their own e-commerce website wherein their users can post products and submit reviews.
 
 ### Target Audiences 
-* As a careful consumer, I want to see if the product I'm interested in has positive reviews so that I may buy it.
-* As an avid user of the website, I want to compare different comments from competing brands so I have an insight on which has the best offer.
-* As an online shopaholic, I want others to like my reviews so that I will have the satisfaction of knowing that other people find my review helpful/useful.
+| User Stories | Acceptance Criteria  |
+| --- | --- |
+| As a careful consumer, I want to see if the product I'm interested in has positive reviews so that I may buy it | Feedbacks on products are displayed as well as the amount of traction it got with other people (presented through likes) |
+| As an avid user of the website, I want to compare different comments from competing brands so I have an insight on which has the best offer | Products can be sorted by brands and the produt information is readily available for review |
+| As an online shopaholic, I want others to like my reviews so that I will have the satisfaction of knowing that other people find my review helpful/useful | Provide interactions with other users and their reviews about the product that they like |
 
 ## Features
 ### Major Features 
